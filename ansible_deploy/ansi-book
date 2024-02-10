@@ -1,0 +1,4 @@
+- name: Debug Ansible User
+  debug:
+    var: ansible_user
+
