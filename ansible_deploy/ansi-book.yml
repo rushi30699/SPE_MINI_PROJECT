@@ -1,4 +1,3 @@
----
 - name: Pull docker image of Calculator
   hosts: all
   tasks:
@@ -12,4 +11,9 @@
 
     - name: Run container
       shell: docker run -it -d rushi4350/tag:tag
+      register: run_container_output
+
+    - name: Display output of docker run command
+      debug:
+        var: run_container_output.stdout_lines
 
